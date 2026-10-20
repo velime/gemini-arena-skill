@@ -99,6 +99,24 @@ its card on one line); rounds ("2 rounds, 4 agents in, 1 left"); if there was a 
 check's scores honestly, even if the old answer won; where the run folder is. If the solution changes
 the user's project files, do not apply it: ask.
 
+## Journal
+
+After the result (Step 5), append one entry per finished run to `JOURNAL.md` in `WORK_ROOT` (create it
+with the first line `# Gemini work journal` if missing; only append, never rewrite old entries; tell the
+user once where it is).
+
+```text
+## <YYYY-MM-DD HH:MM> arena/<slug> (gemini-arena, <agents> agents)
+- Task: <one line, in the user's words>
+- Run: <rounds>, <Gemini jobs>, <minutes>; Gemini tokens = sum of `usage.total_tokens` in `logs/*.json`
+- Result: <champion id and its card in one line; or stopped (quota) with the phase it reached>
+- Claude judged: <how many matches>
+- Problems: <quota stops, jobs that produced nothing, hard failures, or none>
+```
+
+Take the numbers from the run folder, do not guess; write `unknown` where you have none. At most 8
+lines. No secrets or personal data.
+
 ## Rules
 
 - You run the tournament; you never compete, attack or judge, except the Claude judging in step 4.

@@ -35,6 +35,9 @@ cost about 78k tokens.
 Requirements: Python 3.8+, `agy` installed and signed in (see the setup in
 [agy-gemini-mcp](https://github.com/velime/agy-gemini-mcp)). Copy `skills/gemini-arena` into
 `.claude/skills/` of your project or `~/.claude/skills/`. Then ask Claude to run the skill with a task.
+Tested on Windows 11 with Python 3.13 and Antigravity CLI 1.4.2; the upstream `bracket.py` declares
+Python 3.8+, which we did not run. Linux and macOS are not tested. The final check against a rejected
+answer (`--baseline-file`) is covered only by the offline tests, not by a real Gemini run.
 
 Manual use without Claude:
 
